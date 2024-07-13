@@ -16,8 +16,15 @@ function Resume() {
         <h1 class="font-bold text-2xl text-ds-green-2">Work Experiences</h1>
         <div class="mt-4">
           <div class="flex flex-col md:flex-row justify-between">
-            <h2 class="text-md font-[700]">BnP at ShopeeFood</h2>
-            <p class="text-xs">May 2023 - Present</p>
+            <h2 class="text-md font-[700]">Strategy & Planning at Gojek</h2>
+            <p class="text-xs">May 2024 - Present</p>
+          </div>
+          <p class="text-sm mt-1">Driving supply analyses and experimentation for Gojek Strategy & Planning team, impacting growth and market leadership in Indonesia, Singapore, and Vietnam.</p>
+        </div>
+        <div class="mt-4">
+          <div class="flex flex-col md:flex-row justify-between">
+            <h2 class="text-md font-[700]">Strategy & Planning at ShopeeFood</h2>
+            <p class="text-xs">May 2023 - Apr 2023</p>
           </div>
           <p class="text-sm mt-1">Led ShopeeFood service quality, optimizing completion time, balancing demand and supply, and conducting data analysis for reliability improvement.</p>
         </div>
