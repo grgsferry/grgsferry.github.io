@@ -24,7 +24,7 @@ function Resume() {
         <div class="mt-4">
           <div class="flex flex-col md:flex-row justify-between">
             <h2 class="text-md font-[700]">Budgeting & Planning at ShopeeFood</h2>
-            <p class="text-xs">May 2023 - Apr 2023</p>
+            <p class="text-xs">May 2023 - Apr 2024</p>
           </div>
           <p class="text-sm mt-1">Led ShopeeFood service quality, optimizing completion time, balancing demand and supply, and conducting data analysis for reliability improvement.</p>
         </div>

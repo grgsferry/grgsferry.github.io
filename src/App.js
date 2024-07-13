@@ -13,7 +13,7 @@ function App() {
           tools. Currently I am:
         </p>
         <ul class="my-2 list-disc">
-          <li class="ml-6">Working in one of Indonesia's largest delivery apps</li>
+          <li class="ml-6">Working in one of Indonesia's largest tech company</li>
           <li class="ml-6">Freelancing on data related projects</li>
           <li class="ml-6">Developing data visualizations that piqued my interests</li>
         </ul>
