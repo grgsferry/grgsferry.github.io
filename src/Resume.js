@@ -23,7 +23,7 @@ function Resume() {
         </div>
         <div class="mt-4">
           <div class="flex flex-col md:flex-row justify-between">
-            <h2 class="text-md font-[700]">Strategy & Planning at ShopeeFood</h2>
+            <h2 class="text-md font-[700]">Budgeting & Planning at ShopeeFood</h2>
             <p class="text-xs">May 2023 - Apr 2023</p>
           </div>
           <p class="text-sm mt-1">Led ShopeeFood service quality, optimizing completion time, balancing demand and supply, and conducting data analysis for reliability improvement.</p>
@@ -52,6 +52,7 @@ function Resume() {
             <p class="text-xs">Aug 2015 - Oct 2019</p>
           </div>
           <p class="text-sm">Bachelor of Science, Civil Engineering</p>
+          <p class="text-sm">Elective courses in transportation engineering</p>
         </div>
       </div>
 
