@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out -b gh-pages"
+    "deploy": "gh-pages -d out -b gh-pages -t true"
   },
   "dependencies": {
     "framer-motion": "^11.0.0",
