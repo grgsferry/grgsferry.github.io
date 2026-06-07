@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Superstore Dashboard",
+    "description": "Monitoring Superstore's number of items sold and revenues per category, sub-category, and product using stacked bar chart, table chart, and area chart.",
+    "photo": "/images/Gregorius-Ferry-Looker-Studio-Superstore-Dashboard.png",
+    "tags": ["Dashboard", "Looker Studio"],
+    "link": "https://lookerstudio.google.com/u/1/reporting/56415995-bcc3-4d9b-8274-baddad37e1b7"
+  },
+  {
+    "name": "E-commerce Logs Dashboard",
+    "description": "Monitoring e-commerce logs per country, languages, and network protocol using bubble map chart and line chart.",
+    "photo": "/images/Gregorius-Ferry-Looker-Ecommerce-Logs-Dashboard.png",
+    "tags": ["Dashboard", "Looker Studio"],
+    "link": "https://lookerstudio.google.com/u/1/reporting/748c66ff-3ce8-4a60-851e-0f5195e33650"
+  },
+  {
+    "name": "Superstore Dashboard (Static)",
+    "description": "Monitoring Superstore's YoY number of items sold, revenues, and profit using line chart and table chart.",
+    "photo": "/images/Gregorius-Ferry-Tableau-Superstore-Dashboard-Static.png",
+    "tags": ["Dashboard", "Tableau"],
+    "link": "https://public.tableau.com/app/profile/gregorius.ferry/viz/SuperstoreDashboardv1_0/Dashboard"
+  },
+  {
+    "name": "Superstore Dashboard (Dynamic)",
+    "description": "Monitoring Superstore's number of orders, revenues, and profit per region, state, category, sub-category using line chart, stacked bar chart, and table chart.",
+    "photo": "/images/Gregorius-Ferry-Tableau-Superstore-Dashboard-Dynamic.png",
+    "tags": ["Dashboard", "Tableau"],
+    "link": "https://public.tableau.com/app/profile/gregorius.ferry/viz/SuperstoreDashboard_16900518960460/Dashboard1"
+  },
+  {
+    "name": "New York City AirBnB Open Data",
+    "description": "Mapping out New York City AirBnB's per filter applied (area, room type, minimum nights, number of reviews) using dot density map chart, heat map chart, and table chart.",
+    "photo": "/images/Gregorius-Ferry-Tableau-New-York-City-AirBnB-Open-Data.png",
+    "tags": ["Dashboard", "Tableau"],
+    "link": "https://public.tableau.com/app/profile/gregorius.ferry/viz/NewYorkCityAirbnbOpenData_16804527165970/Dashboard"
+  },
+  {
+    "name": "Coronavirus Case and Vaccine Dashboard",
+    "description": "Mapping out countries in terms of coronavirus cases and vaccinations severities using bubble map chart, choropleth map chart, and table chart.",
+    "photo": "/images/Gregorius-Ferry-Tableau-Coronavirus-Case-and-Vaccine-Dashboard.png",
+    "tags": ["Dashboard", "Tableau"],
+    "link": "https://public.tableau.com/app/profile/gregorius.google.com/viz/CoronavirusCaseandVaccineDashboard/Dashboard1"
+  },
+  {
+    "name": "Android Games Statistical Dashboard",
+    "description": "Showing statistical metrics of the top Android Games using bar chart, area chart, and table chart.",
+    "photo": "/images/Gregorius-Ferry-Tableau-Android-Games-Statistical-Dashboard.png",
+    "tags": ["Dashboard", "Tableau"],
+    "link": "https://public.tableau.com/app/profile/gregorius.ferry/viz/AndroidGamesStatisticalDashboard/Dashboard1"
+  },
+  {
+    "name": "Heart Attack Patients Health Parameter Visualization",
+    "description": "Showing statistical comparison between parameters of heart attack patients using pie chart and stacked bar chart",
+    "photo": "/images/Gregorius-Ferry-Tableau-Heart-Attack-Patients-Health-Parameter-Visualization.png",
+    "tags": ["Dashboard", "Tableau"],
+    "link": "https://public.tableau.com/app/profile/gregorius.ferry/viz/heart_attack_viz/Dashboard1"
+  }
+]

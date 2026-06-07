@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+/* Prose styles for blog markdown */
+.prose h1 { @apply text-2xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-100; }
+.prose h2 { @apply text-xl font-bold mt-5 mb-2 text-gray-800 dark:text-gray-100; }
+.prose h3 { @apply text-lg font-semibold mt-4 mb-2 text-gray-700 dark:text-gray-200; }
+.prose p  { @apply text-sm leading-relaxed mb-3 text-gray-700 dark:text-gray-300; }
+.prose ul { @apply list-disc ml-5 mb-3 text-sm text-gray-700 dark:text-gray-300; }
+.prose ol { @apply list-decimal ml-5 mb-3 text-sm text-gray-700 dark:text-gray-300; }
+.prose li { @apply mb-1; }
+.prose a  { @apply underline text-ds-green-2 hover:font-semibold; }
+.prose code { @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-xs font-mono; }
+.prose pre { @apply bg-gray-100 dark:bg-gray-800 rounded p-4 overflow-x-auto mb-4; }
+.prose pre code { @apply bg-transparent p-0; }
+.prose blockquote { @apply border-l-4 border-ds-green-2 pl-4 italic text-gray-500 dark:text-gray-400 mb-3; }
+.prose strong { @apply font-semibold; }
+.prose hr { @apply my-6 border-gray-200 dark:border-gray-700; }
+.prose img { @apply rounded my-4 max-w-full; }
