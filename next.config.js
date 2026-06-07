@@ -8,6 +8,7 @@ const nextConfig = {
   experimental: {
     // View Transitions API support (Next.js 14+)
   },
+  trailingSlash: true, // Forces Next.js to fix page routing paths for static hosting
 };
 
 module.exports = nextConfig;
