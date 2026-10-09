@@ -32,9 +32,10 @@ export default function Blog() {
                   <p className="text-xs text-gray-400 shrink-0">{post.date}</p>
                 </div>
                 {post.description && <p className="text-sm mt-1 text-gray-600 dark:text-gray-400">{post.description}</p>}
-                {post.tags && post.tags.length > 0 && (
+                {(post.draft || (post.tags && post.tags.length > 0)) && (
                   <div className="flex flex-wrap gap-1 mt-2">
-                    {post.tags.map((tag) => (
+                    {post.draft && <span className="text-xs bg-gray-500 text-white px-2 py-0 rounded-full">Draft</span>}
+                    {post.tags?.map((tag) => (
                       <span key={tag} className="text-xs bg-ds-green-2 text-white px-2 py-0 rounded-full">
                         {tag}
                       </span>

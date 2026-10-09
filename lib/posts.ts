@@ -7,12 +7,16 @@ import remarkGfm from "remark-gfm";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
+// Drafts (`draft: true` in frontmatter) are visible in `next dev` but excluded from production builds.
+const showDrafts = process.env.NODE_ENV !== "production";
+
 export type PostMeta = {
   slug: string;
   title: string;
   date: string;
   description: string;
   tags?: string[];
+  draft?: boolean;
 };
 
 export type Post = PostMeta & {
@@ -20,13 +24,7 @@ export type Post = PostMeta & {
 };
 
 export function getAllPostSlugs(): { params: { slug: string } }[] {
-  if (!fs.existsSync(postsDirectory)) return [];
-  const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames
-    .filter((f) => f.endsWith(".md"))
-    .map((fileName) => ({
-      params: { slug: fileName.replace(/\.md$/, "") },
-    }));
+  return getSortedPostsMetadata().map(({ slug }) => ({ params: { slug } }));
 }
 
 export function getSortedPostsMetadata(): PostMeta[] {
@@ -47,8 +45,10 @@ export function getSortedPostsMetadata(): PostMeta[] {
         date: data.date ?? "",
         description: data.description ?? "",
         tags: data.tags ?? [],
+        draft: data.draft === true,
       } as PostMeta;
-    });
+    })
+    .filter((post) => showDrafts || !post.draft);
 
   return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
@@ -57,6 +57,7 @@ export async function getPostData(slug: string): Promise<Post> {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
+  if (data.draft === true && !showDrafts) throw new Error(`Post "${slug}" is a draft`);
 
   const processedContent = await remark().use(remarkGfm).use(remarkHtml, { sanitize: false }).process(content);
 
@@ -68,6 +69,7 @@ export async function getPostData(slug: string): Promise<Post> {
     date: data.date ?? "",
     description: data.description ?? "",
     tags: data.tags ?? [],
+    draft: data.draft === true,
     contentHtml,
   };
 }
