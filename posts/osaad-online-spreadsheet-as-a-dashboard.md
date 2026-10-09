@@ -61,25 +61,21 @@ As for dashboard functionalities, almost all of them already exist in online spr
 
 With speed and ease comes higher variance and unpredictability:
 
-1. Shorter dashboard lifespans result in a higher number of abandoned and concurrently maintained dashboards.
-   - _Mitigation:_ Maintain a central dashboard repository detailing the goals of each sheet. Any new data requests must be reviewed to see if they can be integrated into an existing dashboard before creating a new one.
-2. Providing only raw data risks data misunderstandings, as there is no standard definition for the datapoints.
-   - _Mitigation:_ Always include a data dictionary guide or core curated insights within the setup.
-3. Loss of a "Single Source of Truth" (SSOT) when different business users apply conflicting formula logic (`SUMIFS`, `FILTER`) to the same raw data.
-   - _Mitigation:_ Define critical business logic by query script itself, rather than calculating it on the sheet.
+| Problem                                                                                                                                            | Mitigation                                                                                                                                                                                               |
+| :------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Shorter dashboard lifespans result in a higher number of abandoned and concurrently maintained dashboards.                                         | Maintain a central dashboard repository detailing the goals of each sheet. Any new data requests must be reviewed to see if they can be integrated into an existing dashboard before creating a new one. |
+| Providing only raw data risks data misunderstandings, as there is no standard definition for the datapoints.                                       | Always include a data dictionary guide or core curated insights within the setup.                                                                                                                        |
+| Loss of a "Single Source of Truth" (SSOT) when different business users apply conflicting formula logic (`SUMIFS`, `FILTER`) to the same raw data. | Define critical business logic by query script itself, rather than calculating it on the sheet.                                                                                                          |
 
 On top of that, online spreadsheets also have structural limitations:
 
-1. Maximum cell count limitations (e.g., 10 million cells in Google Sheets).
-   - _Mitigation:_ Minimize cell usage by keeping only the last X periods of data, reducing aggregation combinations, and deleting unused blank cells (yes, they are counted).
-2. Steeper performance trade-offs as data scales compared to dedicated BI tools.
-   - _Mitigation:_ Apply the same mitigation strategies mentioned above.
-3. Lack of robust, granular access management per user, which increases the risk of accidental edits.
-   - _Mitigation:_ Lock cells and ranges that are not supposed to be editable, restricting edit access to the data analyst or data team.
-4. Compromised data governance, since spreadsheets can easily be duplicated, downloaded, or shared externally.
-   - _Mitigation:_ Restrict sharing permissions strictly to corporate emails only, reduce "share to all" practice, and monitor sensitive activities.
-5. Limited native visualization options and limited database connectors compared to full-scale BI platforms.
-   - _Mitigation:_ None, accept this limitation as a constraint.
+| Problem                                                                                                     | Mitigation                                                                                                                                                  |
+| :---------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Maximum cell count limitations (e.g., 10 million cells in Google Sheets).                                   | Minimize cell usage by keeping only the last X periods of data, reducing aggregation combinations, and deleting unused blank cells (yes, they are counted). |
+| Steeper performance trade-offs as data scales compared to dedicated BI tools.                               | Apply the same mitigation strategies mentioned above (minimize cell usage, keep fewer periods, reduce aggregations).                                        |
+| Lack of robust, granular access management per user, which increases the risk of accidental edits.          | Lock cells and ranges that are not supposed to be editable, restricting edit access to the data analyst or data team.                                       |
+| Compromised data governance, since spreadsheets can easily be duplicated, downloaded, or shared externally. | Restrict sharing permissions strictly to corporate emails only, reduce "share to all" practice, and monitor sensitive activities.                           |
+| Limited native visualization options and limited database connectors compared to full-scale BI platforms.   | None – accept this limitation as a constraint.                                                                                                              |
 
 ## Conclusion
 
