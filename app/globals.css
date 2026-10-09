@@ -33,3 +33,6 @@
 .prose strong { @apply font-semibold; }
 .prose hr { @apply my-6 border-gray-200 dark:border-gray-700; }
 .prose img { @apply rounded my-4 max-w-full; }
+.prose table { @apply w-full border-collapse mb-4 text-sm text-gray-700 dark:text-gray-300; }
+.prose th { @apply text-left font-semibold text-gray-800 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-600 px-2 py-2 align-top; }
+.prose td { @apply border-b border-gray-200 dark:border-gray-700 px-2 py-2 align-top leading-relaxed; }
