@@ -15,7 +15,7 @@ module.exports = {
         "ds-purple": "#414487",
       },
       fontFamily: {
-        ibm: ['"IBM Plex Sans"', "sans-serif"],
+        ibm: ["var(--font-ibm)", "sans-serif"],
       },
       animation: {
         blob: "blob 7s infinite",

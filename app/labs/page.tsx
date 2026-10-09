@@ -35,6 +35,8 @@ export default function Projects() {
               className="max-h-32 md:min-w-52 md:max-w-60 md:min-h-12 md:max-h-36 object-cover"
               src={data.photo}
               alt={data.name}
+              loading="lazy"
+              decoding="async"
             />
             <div className="flex-col space-y-1">
               <h2 className="font-bold text-md dark:text-gray-100">{data.name}</h2>

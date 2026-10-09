@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import Blob from "@/components/Blob";
 import ThemeProvider from "@/components/ThemeProvider";
@@ -10,9 +11,17 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.svg" },
 };
 
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-ibm",
+});
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={ibmPlexSans.variable} suppressHydrationWarning>
       <body className="bg-white dark:bg-gray-950 font-ibm text-gray-700 dark:text-gray-300 transition-colors duration-200">
         <ThemeProvider>
           <Blob />
