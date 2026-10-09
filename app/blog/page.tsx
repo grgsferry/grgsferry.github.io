@@ -20,7 +20,7 @@ export default function Blog() {
 
       {posts.length === 0 ? (
         <p className="text-sm text-gray-500">
-          No posts yet. Add a <code className="bg-gray-100 px-1 rounded">.md</code> file to the <code className="bg-gray-100 px-1 rounded">/posts</code> folder to get started.
+          No posts yet. Add a <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">.md</code> file to the <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">/posts</code> folder to get started.
         </p>
       ) : (
         <div className="space-y-4">

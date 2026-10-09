@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Resume() {
+export default function Projects() {
   return (
     <>
       <div className="flex justify-between">
@@ -48,7 +48,6 @@ export default function Resume() {
           },
         ].map(({ id, title, client, link, industry, tools, outputs, period, summary }) => (
           <div key={id} className="flex flex-col gap-0.5 mt-6">
-            <></>
             <h2 className="text-md font-[700]">{title}</h2>
 
             <div className="flex flex-wrap items-center gap-2">
@@ -86,11 +85,13 @@ export default function Resume() {
             </div>
 
             <span className="text-sm font-[600] text-gray-500">Summary:</span>
-            {summary.map((item) => (
-              <li key={item} className="mx-6 text-sm text-gray-600 dark:text-gray-100">
-                {item}
-              </li>
-            ))}
+            <ul className="list-disc">
+              {summary.map((item) => (
+                <li key={item} className="mx-6 text-sm text-gray-600 dark:text-gray-100">
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>

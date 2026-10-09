@@ -1,5 +1,3 @@
-"use client";
-
 export default function Blob() {
   return (
     <div className="relative top-0 left-0 right-0 h-64 flex items-center justify-center px-16 pointer-events-none">

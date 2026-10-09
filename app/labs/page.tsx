@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import loopData from "@/data/loop-files.json";
 
 type Project = {
@@ -12,7 +11,7 @@ type Project = {
 
 const projects: Project[] = loopData as Project[];
 
-export default function Projects() {
+export default function Labs() {
   return (
     <>
       <div className="flex justify-between">

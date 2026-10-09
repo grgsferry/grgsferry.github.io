@@ -11,6 +11,12 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .animate-blob {
+    animation: none;
+  }
+}
+
 /* Prose styles for blog markdown */
 .prose h1 { @apply text-2xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-100; }
 .prose h2 { @apply text-xl font-bold mt-5 mb-2 text-gray-800 dark:text-gray-100; }

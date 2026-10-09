@@ -11,7 +11,6 @@
     "deploy": "gh-pages -d out -b gh-pages -t"
   },
   "dependencies": {
-    "framer-motion": "^11.0.0",
     "gray-matter": "^4.0.3",
     "next": "^14.2.0",
     "next-themes": "^0.3.0",
