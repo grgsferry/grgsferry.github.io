@@ -35,7 +35,7 @@ export default function Resume() {
           {
             company: "Inspigo",
             title: "Data Analyst",
-            period: "Dec 2021 - Jun 2023",
+            period: "Dec 2021 - May 2023",
             desc: "Conducted data analysis, communicated insights on product and marketing metrics, led data projects, implemented dashboards, and enhanced activation and engagement rates.",
           },
           {
