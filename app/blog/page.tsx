@@ -9,8 +9,8 @@ export default function Blog() {
   return (
     <>
       <div className="flex justify-between">
-        <p className="underline hover:font-bold hover:text-ds-green-2">
-          <Link href="/">&lt; Back</Link>
+        <p>
+          <Link className="link-hl" href="/">&lt; Back</Link>
         </p>
       </div>
 

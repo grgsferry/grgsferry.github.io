@@ -4,22 +4,48 @@ export default function Projects() {
   return (
     <>
       <div className="flex justify-between">
-        <p className="underline hover:font-bold hover:text-ds-green-2">
-          <Link href="/">&lt; Back</Link>
+        <p>
+          <Link className="link-hl" href="/">
+            &lt; Back
+          </Link>
         </p>
       </div>
 
       <hr className="h-px my-6 bg-gray-300 dark:bg-gray-700 border-0" />
 
       <div className="my-6">
-        <h1 className="font-bold text-2xl text-ds-green-2">Past Freelance Projects</h1>
+        <h1 className="font-bold text-2xl text-ds-green-2">Selected Projects</h1>
         {[
           {
+            id: 3,
+            title: "Business Dashboard and Conversational AI Agent",
+            client: "Union Group",
+            link: "https://uniongroupjakarta.com/",
+            industry: "Food and Beverage",
+            tools: ["GCP", "BigQuery", "Google Data Studio", "Python"],
+            outputs: ["dashboard", "AI implementation", "data warehouse", "pipeline"],
+            period: "Ongoing (Sep 2026 - Present)",
+            summary: [
+              {
+                label: "BI Solution Design & Process Optimization",
+                text: "Consulted stakeholders to address reporting and operational inefficiencies, designed BI solutions, and delivered data products that improved efficiency by up to 15x, reducing turnaround time by 93%.",
+              },
+              {
+                label: "Data Infrastructure & Analytics Engineering",
+                text: "Built an end-to-end Google Cloud Platform (GCP) data ecosystem spanning data warehousing, cloud storage, API-driven services, orchestration, schema design, BI dashboards, and a conversational AI agent (test-to-SQL). Integrated data across POS platforms, CRM systems, SAP ERP, and operational tools.",
+              },
+              {
+                label: "Cross-Functional Stakeholder Management",
+                text: "Bridged business and technical teams across engineering, finance, business leadership, and operations, translating business requirements into scalable technical solutions.",
+              },
+            ],
+          },
+          {
             id: 2,
-            title: "Spatial-based demography data analysis",
+            title: "Data Scraper and Spatial-Based Dashboard",
             client: "Confidential Client",
             link: null,
-            industry: "Marketing",
+            industry: "Consulting, Marketing",
             tools: ["Python", "Metabase", "PostgreSQL"],
             outputs: ["raw data", "dashboard", "report"],
             period: "1 month (Oct 2024 - Nov 2024)",
@@ -40,11 +66,11 @@ export default function Projects() {
           },
           {
             id: 1,
-            title: "Inventory management dashboard and pipeline",
+            title: "Inventory Management Dashboard and Pipeline",
             client: "Eyelovin",
             link: "https://www.eyelovin.com/",
             industry: "Ecommerce, Fashion and Beauty",
-            tools: ["Tableau", "Tableau Prep", "AWS", "MySQL"],
+            tools: ["Tableau", "Tableau Prep", "MySQL", "AWS"],
             outputs: ["data pipeline", "dashboard"],
             period: "4 months (Sep 2023 - Dec 2023)",
             summary: [
@@ -69,7 +95,7 @@ export default function Projects() {
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-sm font-[600] text-gray-500">Client:</span>
               {link ? (
-                <Link className="text-sm text-ds-green-2 underline hover:font-bold" href={link}>
+                <Link className="text-sm text-ds-green-2 link-hl" href={link}>
                   {client}
                 </Link>
               ) : (
