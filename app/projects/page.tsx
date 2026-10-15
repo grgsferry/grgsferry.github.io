@@ -17,17 +17,25 @@ export default function Projects() {
           {
             id: 2,
             title: "Spatial-based demography data analysis",
-            client: "Undisclosed",
-            link: "/projects/#",
-            industry: "Non-Governmental Organization",
+            client: "Confidential Client",
+            link: null,
+            industry: "Marketing",
             tools: ["Python", "Metabase", "PostgreSQL"],
             outputs: ["raw data", "dashboard", "report"],
             period: "1 month (Oct 2024 - Nov 2024)",
             summary: [
-              "Extracted and processed publicly available demographic and socio-economic metrics",
-              "Stored the data to a database",
-              "Created a dashboard based on the stored data for the client to explore the data themselves",
-              "Analyzed the data to derive insights on sub-regional level and gave recommendations for the client to effectively reach their goal using various statistics techniques",
+              {
+                label: "Data Pipeline Development",
+                text: "Developed automated scrapers to extract public data from national statistics websites and PDF documents, then cleaned and transformed raw data into structured, analysis-ready datasets.",
+              },
+              {
+                label: "Solution Architecture & Delivery",
+                text: "Designed and deployed a hosted PostgreSQL database and Metabase dashboards, structuring the schema and visualizations around recurring user questions to enable self-service data exploration.",
+              },
+              {
+                label: "Analytics & Strategic Recommendations",
+                text: "Applied statistical methods to analyze subregional data, uncover socioeconomic patterns, and develop recommendations to help the client prioritize its outreach strategy.",
+              },
             ],
           },
           {
@@ -40,10 +48,18 @@ export default function Projects() {
             outputs: ["data pipeline", "dashboard"],
             period: "4 months (Sep 2023 - Dec 2023)",
             summary: [
-              "Determined the dashboard metrics and design by understanding client's needs",
-              "Liased with client's software engineer to understand the complex data schema and multisource data problem",
-              "Created a data pipeline and extract job from multiple data source that feeds into a SSOT table",
-              "Created a dashboard that gives insights to inventory management, product cycle, and stock keeping",
+              {
+                label: "Business Process Analysis",
+                text: "Consulted stakeholders to understand inventory management, product lifecycles, and stockkeeping processes, identifying key metrics to monitor and improve daily operations.",
+              },
+              {
+                label: "BI Solution Development",
+                text: "Designed and implemented Tableau Cloud dashboards to support operational monitoring and performance tracking, addressing complex data schemas and integrating data from multiple sources.",
+              },
+              {
+                label: "Data Preparation & Orchestration",
+                text: "Built data preparation and orchestration workflows using Tableau Prep to consolidate multisource data and support reliable, consistent dashboard reporting.",
+              },
             ],
           },
         ].map(({ id, title, client, link, industry, tools, outputs, period, summary }) => (
@@ -52,10 +68,13 @@ export default function Projects() {
 
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-sm font-[600] text-gray-500">Client:</span>
-              {/* <p className="text-sm">{client}</p> */}
-              <Link className="text-sm text-ds-green-2 underline hover:font-bold" href={link}>
-                {client}
-              </Link>
+              {link ? (
+                <Link className="text-sm text-ds-green-2 underline hover:font-bold" href={link}>
+                  {client}
+                </Link>
+              ) : (
+                <p className="text-sm">{client}</p>
+              )}
             </div>
 
             <div className="flex flex-wrap items-center gap-2">
@@ -86,9 +105,9 @@ export default function Projects() {
 
             <span className="text-sm font-[600] text-gray-500">Summary:</span>
             <ul className="list-disc">
-              {summary.map((item) => (
-                <li key={item} className="mx-6 text-sm text-gray-600 dark:text-gray-100">
-                  {item}
+              {summary.map(({ label, text }) => (
+                <li key={label} className="mx-6 text-sm text-gray-600 dark:text-gray-100">
+                  <span className="font-[600]">{label}:</span> {text}
                 </li>
               ))}
             </ul>
