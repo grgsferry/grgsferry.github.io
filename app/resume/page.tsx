@@ -46,9 +46,9 @@ export default function Resume() {
           },
         ].map(({ company, title, period, desc }) => (
           <div key={title} className="mt-4">
-            <h2 className="text-md font-[700]">{company}</h2>
+            <h2 className="text-base font-bold">{company}</h2>
             <div className="flex flex-col md:flex-row justify-between">
-              <h2 className="text-sm font-[500] mt-1">{title}</h2>
+              <h2 className="text-sm font-medium mt-1">{title}</h2>
               <p className="text-xs">{period}</p>
             </div>
             <p className="text-sm mt-1">{desc}</p>
@@ -60,7 +60,7 @@ export default function Resume() {
         <h1 className="font-bold text-2xl text-ds-green-2">Education</h1>
         <div className="mt-4">
           <div className="flex flex-col md:flex-row justify-between">
-            <h2 className="text-md font-[700]">Bandung Institute of Technology</h2>
+            <h2 className="text-base font-bold">Bandung Institute of Technology</h2>
             <p className="text-xs">Aug 2015 - Oct 2019</p>
           </div>
           <p className="text-sm">Bachelor of Science, Civil Engineering</p>
@@ -72,7 +72,7 @@ export default function Resume() {
         <h1 className="font-bold text-2xl text-ds-green-2">Skills and Tools</h1>
 
         <div className="mt-4">
-          <h2 className="text-sm font-[500] mb-2">Skills</h2>
+          <h2 className="text-sm font-medium mb-2">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {[
               "data analysis",
@@ -90,7 +90,7 @@ export default function Resume() {
               "data cleaning",
               "data modeling",
             ].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 px-3 py-1 rounded-full">
+              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
                 {skill}
               </span>
             ))}
@@ -98,10 +98,10 @@ export default function Resume() {
         </div>
 
         <div className="mt-4">
-          <h2 className="text-sm font-[500] mb-2">Programming Languages</h2>
+          <h2 className="text-sm font-medium mb-2">Programming Languages</h2>
           <div className="flex flex-wrap gap-1">
             {["SQL", "Python", "JavaScript", "TypeScript"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 px-3 py-1 rounded-full">
+              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
                 {skill}
               </span>
             ))}
@@ -109,10 +109,10 @@ export default function Resume() {
         </div>
 
         <div className="mt-4">
-          <h2 className="text-sm font-[500] mb-2">Databases</h2>
+          <h2 className="text-sm font-medium mb-2">Databases</h2>
           <div className="flex flex-wrap gap-1">
             {["BigQuery", "MySQL", "PostgreSQL", "SQL Server", "SQLite", "Presto", "MaxCompute"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 px-3 py-1 rounded-full">
+              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
                 {skill}
               </span>
             ))}
@@ -120,10 +120,10 @@ export default function Resume() {
         </div>
 
         <div className="mt-4">
-          <h2 className="text-sm font-[500] mb-2">Dashboard & BI Tools</h2>
+          <h2 className="text-sm font-medium mb-2">Dashboard & BI Tools</h2>
           <div className="flex flex-wrap gap-1">
             {["Data Studio", "Tableau", "Power BI", "Quick BI", "Metabase", "Redash"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 px-3 py-1 rounded-full">
+              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
                 {skill}
               </span>
             ))}
@@ -131,10 +131,10 @@ export default function Resume() {
         </div>
 
         <div className="mt-4">
-          <h2 className="text-sm font-[500] mb-2">Python Libraries</h2>
+          <h2 className="text-sm font-medium mb-2">Python Libraries</h2>
           <div className="flex flex-wrap gap-1">
             {["pandas", "NumPy", "Matplotlib", "seaborn", "Plotly", "scikit-learn", "scipy", "Streamlit", "Beautiful Soup", "Scrapy"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 px-3 py-1 rounded-full">
+              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
                 {skill}
               </span>
             ))}
@@ -142,10 +142,10 @@ export default function Resume() {
         </div>
 
         <div className="mt-4">
-          <h2 className="text-sm font-[500] mb-2">Others</h2>
+          <h2 className="text-sm font-medium mb-2">Others</h2>
           <div className="flex flex-wrap gap-1">
             {["Airflow", "Git", "Docker"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 px-3 py-1 rounded-full">
+              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
                 {skill}
               </span>
             ))}

@@ -38,9 +38,9 @@ export default async function BlogPost({ params }: Props) {
       <hr className="h-px my-6 bg-gray-300 dark:bg-gray-700 border-0" />
 
       <article>
-        <h1 className="font-bold text-2xl text-gray-800 dark:text-gray-100 mb-1">{post.title}</h1>
+        <h1 className="font-bold text-2xl mb-1 text-gray-800 dark:text-gray-100">{post.title}</h1>
         <div className="flex flex-wrap items-center gap-2 mb-4">
-          <p className="text-xs text-gray-400">{post.date}</p>
+          <p className="text-xs text-gray-600 dark:text-gray-300">{post.date}</p>
           {post.draft && <span className="text-xs bg-gray-500 text-white px-2 py-0 rounded-full">Draft</span>}
           {post.tags &&
             post.tags.map((tag) => (

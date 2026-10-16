@@ -23,7 +23,7 @@ const ibmPlexSans = IBM_Plex_Sans({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={ibmPlexSans.variable} suppressHydrationWarning>
-      <body className="bg-white dark:bg-gray-950 font-ibm text-gray-700 dark:text-gray-300 transition-colors duration-200">
+      <body className="bg-white dark:bg-gray-950 font-ibm transition-colors duration-200 text-gray-700 dark:text-gray-200">
         <ThemeProvider>
           <Blob />
           <LinkIntro />

@@ -90,10 +90,10 @@ export default function Projects() {
           },
         ].map(({ id, title, client, link, industry, tools, outputs, period, summary }) => (
           <div key={id} className="flex flex-col gap-1 mt-6 pt-6 first:mt-6 first:pt-0 border-t border-gray-200 dark:border-gray-700 first:border-t-0">
-            <h2 className="text-md font-[700]">{title}</h2>
+            <h2 className="text-base font-bold">{title}</h2>
 
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-sm font-[600] text-gray-500">Client:</span>
+              <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">Client:</span>
               {link ? (
                 <Link className="text-sm text-ds-green-2 link-hl" href={link} target="_blank" rel="noopener noreferrer">
                   {client}
@@ -104,36 +104,36 @@ export default function Projects() {
             </div>
 
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-sm font-[600] text-gray-500">Industry:</span>
+              <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">Industry:</span>
               <p className="text-sm">{industry}</p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-sm font-[600] text-gray-500">Period:</span>
+              <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">Period:</span>
               <p className="text-sm">{period}</p>
             </div>
 
             <div className="flex flex-wrap items-center gap-1">
-              <span className="text-sm font-[600] text-gray-500">Tools:</span>
+              <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">Tools:</span>
               {tools.map((tool) => (
-                <span key={tool} className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-100 px-3 py-1 rounded-full">
+                <span key={tool} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
                   {tool}
                 </span>
               ))}
             </div>
             <div className="flex flex-wrap items-center gap-1">
-              <span className="text-sm font-[600] text-gray-500">Outputs:</span>
+              <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">Outputs:</span>
               {outputs.map((output) => (
-                <span key={output} className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-100 px-3 py-1 rounded-full">
+                <span key={output} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
                   {output}
                 </span>
               ))}
             </div>
 
-            <span className="text-sm font-[600] text-gray-500">Summary:</span>
+            <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">Summary:</span>
             <ul className="list-disc ml-5 space-y-1">
               {summary.map(({ label, text }) => (
-                <li key={label} className="text-sm text-gray-600 dark:text-gray-100">
-                  <span className="font-[600]">{label}:</span> {text}
+                <li key={label} className="text-sm">
+                  <span className="font-semibold">{label}:</span> {text}
                 </li>
               ))}
             </ul>

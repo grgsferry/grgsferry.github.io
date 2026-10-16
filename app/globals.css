@@ -14,27 +14,27 @@
 /* Prose styles for blog markdown */
 .prose h1 { @apply text-2xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-100; }
 .prose h2 { @apply text-xl font-bold mt-5 mb-2 text-gray-800 dark:text-gray-100; }
-.prose h3 { @apply text-lg font-semibold mt-4 mb-2 text-gray-700 dark:text-gray-200; }
-.prose p  { @apply text-sm leading-relaxed mb-3 text-gray-700 dark:text-gray-300; }
-.prose ul { @apply list-disc ml-5 mb-3 text-sm text-gray-700 dark:text-gray-300; }
-.prose ol { @apply list-decimal ml-5 mb-3 text-sm text-gray-700 dark:text-gray-300; }
+.prose h3 { @apply text-lg font-semibold mt-4 mb-2 text-gray-700 dark:text-gray-100; }
+.prose p  { @apply text-sm leading-relaxed mb-3 text-gray-700 dark:text-gray-200; }
+.prose ul { @apply list-disc ml-5 mb-3 text-sm text-gray-700 dark:text-gray-200; }
+.prose ol { @apply list-decimal ml-5 mb-3 text-sm text-gray-700 dark:text-gray-200; }
 .prose li { @apply mb-1; }
 .prose code { @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-xs font-mono; }
 .prose pre { @apply bg-gray-100 dark:bg-gray-800 rounded p-4 overflow-x-auto mb-4; }
 .prose pre code { @apply bg-transparent p-0; }
-.prose blockquote { @apply border-l-4 border-ds-green-2 pl-4 italic text-gray-500 dark:text-gray-400 mb-3; }
+.prose blockquote { @apply border-l-4 border-ds-green-2 pl-4 italic mb-3 text-gray-600 dark:text-gray-300; }
 .prose strong { @apply font-semibold; }
 .prose hr { @apply my-6 border-gray-200 dark:border-gray-700; }
 .prose img { @apply rounded my-4 max-w-full; }
-.prose table { @apply w-full border-collapse mb-4 text-sm text-gray-700 dark:text-gray-300; }
-.prose th { @apply text-left font-semibold text-gray-800 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-600 px-2 py-2 align-top; }
+.prose table { @apply w-full border-collapse mb-4 text-sm text-gray-700 dark:text-gray-200; }
+.prose th { @apply text-left font-semibold border-b-2 border-gray-300 dark:border-gray-600 px-2 py-2 align-top text-gray-800 dark:text-gray-100; }
 .prose td { @apply border-b border-gray-200 dark:border-gray-700 px-2 py-2 align-top leading-relaxed; }
 
 /* Link hover: green highlight sweeps in from the left while the text turns white with it.
    Two background layers share one sweep: a text-clipped white/base gradient and a green fill. */
 .link-hl,
 .prose a {
-  --hl-base: #374151;
+  --hl-base: #1f2937;
   --hl-fill: theme('colors.ds-green-2');
   text-decoration-line: underline;
   text-decoration-color: var(--hl-base);
@@ -81,7 +81,7 @@
 }
 .dark .link-hl,
 .dark .prose a {
-  --hl-base: #d1d5db;
+  --hl-base: #e5e7eb;
 }
 .link-hl.text-ds-green-2,
 .prose a,
