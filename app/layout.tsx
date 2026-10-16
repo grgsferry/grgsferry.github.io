@@ -4,6 +4,7 @@ import "./globals.css";
 import Blob from "@/components/Blob";
 import ThemeProvider from "@/components/ThemeProvider";
 import DarkModeToggle from "@/components/DarkModeToggle";
+import LinkIntro from "@/components/LinkIntro";
 
 export const metadata: Metadata = {
   title: "Gregorius Ferry",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-white dark:bg-gray-950 font-ibm text-gray-700 dark:text-gray-300 transition-colors duration-200">
         <ThemeProvider>
           <Blob />
+          <LinkIntro />
           <div className="container mx-auto max-w-2xl">
             <div className="mt-4 mx-5 mb-12 lg:mx-0 shadow-xl p-6 lg:p-8 rounded-xl bg-transparent">
               <div className="flex justify-end mb-2">

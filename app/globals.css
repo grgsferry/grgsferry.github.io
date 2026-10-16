@@ -11,12 +11,6 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .animate-blob {
-    animation: none;
-  }
-}
-
 /* Prose styles for blog markdown */
 .prose h1 { @apply text-2xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-100; }
 .prose h2 { @apply text-xl font-bold mt-5 mb-2 text-gray-800 dark:text-gray-100; }
@@ -60,6 +54,30 @@
   background-size: 200% 100%, 100% 100%;
   background-position: 0 0, 0 0;
   text-decoration-color: #fff;
+}
+/* Intro sweep (added by LinkIntro): fill in left to right, hold, then retract left to right.
+   The retract needs the text gradient and green fill anchored on the opposite side. While
+   fully filled both look identical, so the images are swapped there with no visible jump. */
+@keyframes link-intro {
+  0% {
+    background-image: linear-gradient(to right, #fff 50%, var(--hl-base) 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
+    background-size: 200% 100%, 0% 100%; background-position: 100% 0, 0 0;
+  }
+  35%, 50% {
+    background-image: linear-gradient(to right, #fff 50%, var(--hl-base) 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
+    background-size: 200% 100%, 100% 100%; background-position: 0 0, 0 0;
+  }
+  50.1%, 65% {
+    background-image: linear-gradient(to right, var(--hl-base) 50%, #fff 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
+    background-size: 200% 100%, 100% 100%; background-position: 100% 0, 100% 0;
+  }
+  100% {
+    background-image: linear-gradient(to right, var(--hl-base) 50%, #fff 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
+    background-size: 200% 100%, 0% 100%; background-position: 0 0, 100% 0;
+  }
+}
+.link-intro {
+  animation: link-intro 1s ease-in-out var(--intro-delay, 0s) both;
 }
 .dark .link-hl,
 .dark .prose a {
