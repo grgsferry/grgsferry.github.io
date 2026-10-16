@@ -18,7 +18,7 @@ export default function Projects() {
         {[
           {
             id: 3,
-            title: "Business Dashboard and Conversational AI Agent",
+            title: "End-to-End Business Intelligence Solution and Conversational AI Agent Implementation",
             client: "Union Group",
             link: "https://uniongroupjakarta.com/",
             industry: "Food and Beverage",
@@ -32,7 +32,7 @@ export default function Projects() {
               },
               {
                 label: "Data Infrastructure & Analytics Engineering",
-                text: "Built an end-to-end Google Cloud Platform (GCP) data ecosystem spanning data warehousing, cloud storage, API-driven services, orchestration, schema design, BI dashboards, and a conversational AI agent (test-to-SQL). Integrated data across POS platforms, CRM systems, SAP ERP, and operational tools.",
+                text: "Built an end-to-end Google Cloud Platform (GCP) data ecosystem spanning data warehousing, cloud storage, API-driven services, orchestration, schema design, BI dashboards, and a conversational AI agent (text-to-SQL). Integrated data across POS platforms, CRM systems, SAP ERP, and operational tools.",
               },
               {
                 label: "Cross-Functional Stakeholder Management",
@@ -42,7 +42,7 @@ export default function Projects() {
           },
           {
             id: 2,
-            title: "Data Scraper and Spatial-Based Dashboard",
+            title: "Data Scraper, Data Transformation, and Spatial-Based Dashboard",
             client: "Confidential Client",
             link: null,
             industry: "Consulting, Marketing",
@@ -89,13 +89,13 @@ export default function Projects() {
             ],
           },
         ].map(({ id, title, client, link, industry, tools, outputs, period, summary }) => (
-          <div key={id} className="flex flex-col gap-0.5 mt-6">
+          <div key={id} className="flex flex-col gap-1 mt-6 pt-6 first:mt-6 first:pt-0 border-t border-gray-200 dark:border-gray-700 first:border-t-0">
             <h2 className="text-md font-[700]">{title}</h2>
 
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-sm font-[600] text-gray-500">Client:</span>
               {link ? (
-                <Link className="text-sm text-ds-green-2 link-hl" href={link}>
+                <Link className="text-sm text-ds-green-2 link-hl" href={link} target="_blank" rel="noopener noreferrer">
                   {client}
                 </Link>
               ) : (
@@ -130,9 +130,9 @@ export default function Projects() {
             </div>
 
             <span className="text-sm font-[600] text-gray-500">Summary:</span>
-            <ul className="list-disc">
+            <ul className="list-disc ml-5 space-y-1">
               {summary.map(({ label, text }) => (
-                <li key={label} className="mx-6 text-sm text-gray-600 dark:text-gray-100">
+                <li key={label} className="text-sm text-gray-600 dark:text-gray-100">
                   <span className="font-[600]">{label}:</span> {text}
                 </li>
               ))}
