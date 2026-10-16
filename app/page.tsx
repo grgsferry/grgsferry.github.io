@@ -35,8 +35,8 @@ export default function Home() {
 
       <hr className="h-px my-6 bg-gray-300 dark:bg-gray-700 border-0" />
 
-      <div className="flex justify-between">
-        <ul className="flex items-center space-x-4">
+      <div className="flex flex-wrap justify-between gap-x-4 gap-y-4">
+        <ul className="flex items-center gap-x-4">
           {[
             { href: "/resume", label: "Resume" },
             { href: "/projects", label: "Projects" },
@@ -51,7 +51,7 @@ export default function Home() {
           ))}
         </ul>
 
-        <ul className="flex items-center space-x-4">
+        <ul className="flex items-center gap-x-4">
           <li>
             <Link href="mailto:grgsferry@gmail.com" target="_blank" rel="noopener noreferrer">
               {/* Email icon inline SVG */}
