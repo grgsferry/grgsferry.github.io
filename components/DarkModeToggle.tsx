@@ -16,7 +16,7 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="w-8 h-8 flex items-center justify-center rounded-full opacity-40 hover:opacity-80 transition-opacity"
+      className={`w-8 h-8 flex items-center justify-center rounded-full transition-opacity ${isDark ? "text-white opacity-90 hover:opacity-100" : "opacity-40 hover:opacity-80"}`}
       aria-label="Toggle dark mode"
     >
       {isDark ? (
