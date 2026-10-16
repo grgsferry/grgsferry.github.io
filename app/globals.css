@@ -61,19 +61,23 @@
 @keyframes link-intro {
   0% {
     background-image: linear-gradient(to right, #fff 50%, var(--hl-base) 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
-    background-size: 200% 100%, 0% 100%; background-position: 100% 0, 0 0;
+    background-size: 200% 100%, 0% 100%; background-clip: text, border-box; -webkit-background-clip: text, border-box;
+    background-position: 100% 0, 0 0;
   }
   35%, 50% {
     background-image: linear-gradient(to right, #fff 50%, var(--hl-base) 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
-    background-size: 200% 100%, 100% 100%; background-position: 0 0, 0 0;
+    background-size: 200% 100%, 100% 100%; background-clip: text, border-box; -webkit-background-clip: text, border-box;
+    background-position: 0 0, 0 0;
   }
   50.1%, 65% {
     background-image: linear-gradient(to right, var(--hl-base) 50%, #fff 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
-    background-size: 200% 100%, 100% 100%; background-position: 100% 0, 100% 0;
+    background-size: 200% 100%, 100% 100%; background-clip: text, border-box; -webkit-background-clip: text, border-box;
+    background-position: 100% 0, 100% 0;
   }
   100% {
     background-image: linear-gradient(to right, var(--hl-base) 50%, #fff 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
-    background-size: 200% 100%, 0% 100%; background-position: 0 0, 100% 0;
+    background-size: 200% 100%, 0% 100%; background-clip: text, border-box; -webkit-background-clip: text, border-box;
+    background-position: 0 0, 100% 0;
   }
 }
 .link-intro {
