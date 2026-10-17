@@ -44,7 +44,7 @@ export default async function BlogPost({ params }: Props) {
           {post.draft && <span className="text-xs bg-gray-500 text-white px-2 py-0 rounded-full">Draft</span>}
           {post.tags &&
             post.tags.map((tag) => (
-              <span key={tag} className="text-xs bg-ds-green-2 text-white px-2 py-0 rounded-full">
+              <span key={tag} className="text-xs bg-ds-green-2 text-white dark:text-gray-900 px-2 py-0 rounded-full">
                 {tag}
               </span>
             ))}

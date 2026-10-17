@@ -26,7 +26,7 @@ export default function Blog() {
         <div className="space-y-4">
           {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`}>
-              <div className="p-4 outline outline-[1px] outline-gray-300 dark:outline-gray-700 rounded-sm hover:shadow-xl hover:outline-ds-green-2 dark:hover:outline-ds-green-2 dark:hover:shadow-[0_0_8px_rgba(34,168,132,0.6),0_0_28px_rgba(34,168,132,0.45)] transition-[box-shadow,outline-color] duration-200 my-4">
+              <div className="p-4 outline outline-[1px] outline-gray-300 dark:outline-gray-700 rounded-sm hover:shadow-xl hover:outline-ds-green-2 dark:hover:outline-ds-green-2 dark:hover:shadow-[0_0_8px_rgba(52,211,160,0.6),0_0_28px_rgba(52,211,160,0.45)] transition-[box-shadow,outline-color] duration-200 my-4">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-1">
                   <h2 className="font-bold text-base dark:text-gray-100">{post.title}</h2>
                   <p className="text-xs shrink-0 text-gray-600 dark:text-gray-300">{post.date}</p>
@@ -36,7 +36,7 @@ export default function Blog() {
                   <div className="flex flex-wrap gap-1 mt-2">
                     {post.draft && <span className="text-xs bg-gray-500 text-white px-2 py-0 rounded-full">Draft</span>}
                     {post.tags?.map((tag) => (
-                      <span key={tag} className="text-xs bg-ds-green-2 text-white px-2 py-0 rounded-full">
+                      <span key={tag} className="text-xs bg-ds-green-2 text-white dark:text-gray-900 px-2 py-0 rounded-full">
                         {tag}
                       </span>
                     ))}

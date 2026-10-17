@@ -5,6 +5,7 @@ import Blob from "@/components/Blob";
 import ThemeProvider from "@/components/ThemeProvider";
 import DarkModeToggle from "@/components/DarkModeToggle";
 import LinkIntro from "@/components/LinkIntro";
+import CardShell from "@/components/CardShell";
 
 export const metadata: Metadata = {
   title: "Gregorius Ferry",
@@ -27,14 +28,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider>
           <Blob />
           <LinkIntro />
-          <div className="container mx-auto max-w-2xl">
-            <div className="mt-4 mx-5 mb-12 lg:mx-0 shadow-xl p-6 lg:p-8 rounded-xl bg-transparent">
-              <div className="flex justify-end mb-2">
-                <DarkModeToggle />
-              </div>
-              {children}
+          <CardShell>
+            <div className="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8">
+              <DarkModeToggle />
             </div>
-          </div>
+            {children}
+          </CardShell>
         </ThemeProvider>
       </body>
     </html>

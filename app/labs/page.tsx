@@ -29,7 +29,7 @@ export default function Labs() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="container flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 p-4 outline outline-[1px] outline-gray-300 dark:outline-gray-700 rounded-sm my-4 hover:shadow-xl hover:outline-ds-green-2 dark:hover:outline-ds-green-2 dark:hover:shadow-[0_0_8px_rgba(34,168,132,0.6),0_0_28px_rgba(34,168,132,0.45)] transition-[box-shadow,outline-color] duration-200">
+          <div className="container flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 p-4 outline outline-[1px] outline-gray-300 dark:outline-gray-700 rounded-sm my-4 hover:shadow-xl hover:outline-ds-green-2 dark:hover:outline-ds-green-2 dark:hover:shadow-[0_0_8px_rgba(52,211,160,0.6),0_0_28px_rgba(52,211,160,0.45)] transition-[box-shadow,outline-color] duration-200">
             <img
               className="max-h-32 md:min-w-52 md:max-w-60 md:min-h-12 md:max-h-36 object-cover"
               src={data.photo}
@@ -43,7 +43,7 @@ export default function Labs() {
                 {data.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs bg-ds-green-2 text-white px-2 py-0 rounded-full"
+                    className="text-xs bg-ds-green-2 text-white dark:text-gray-900 px-2 py-0 rounded-full"
                   >
                     {tag}
                   </span>

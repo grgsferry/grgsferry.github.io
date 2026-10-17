@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root { --ds-green-2: #148468; }
+.dark { --ds-green-2: #34D3A0; }
+
 @layer utilities {
   .animation-delay-2000 {
     animation-delay: 2s;
@@ -35,12 +38,13 @@
 .link-hl,
 .prose a {
   --hl-base: #1f2937;
+  --hl-on: #fff;
   --hl-fill: theme('colors.ds-green-2');
   text-decoration-line: underline;
   text-decoration-color: var(--hl-base);
   color: transparent;
   background-image:
-    linear-gradient(to right, #fff 50%, var(--hl-base) 50%),
+    linear-gradient(to right, var(--hl-on) 50%, var(--hl-base) 50%),
     linear-gradient(var(--hl-fill), var(--hl-fill));
   background-repeat: no-repeat;
   background-clip: text, border-box;
@@ -53,26 +57,26 @@
 .prose a:hover {
   background-size: 200% 100%, 100% 100%;
   background-position: 0 0, 0 0;
-  text-decoration-color: #fff;
+  text-decoration-color: var(--hl-on);
 }
 /* Intro sweep (added by LinkIntro): fill in left to right, hold, then retract left to right.
    The retract needs the text gradient and green fill anchored on the opposite side. While
    fully filled both look identical, so the images are swapped there with no visible jump. */
 @keyframes link-intro {
   0% {
-    background-image: linear-gradient(to right, #fff 50%, var(--hl-base) 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
+    background-image: linear-gradient(to right, var(--hl-on) 50%, var(--hl-base) 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
     background-size: 200% 100%, 0% 100%; background-position: 100% 0, 0 0;
   }
   35%, 50% {
-    background-image: linear-gradient(to right, #fff 50%, var(--hl-base) 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
+    background-image: linear-gradient(to right, var(--hl-on) 50%, var(--hl-base) 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
     background-size: 200% 100%, 100% 100%; background-position: 0 0, 0 0;
   }
   50.1%, 65% {
-    background-image: linear-gradient(to right, var(--hl-base) 50%, #fff 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
+    background-image: linear-gradient(to right, var(--hl-base) 50%, var(--hl-on) 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
     background-size: 200% 100%, 100% 100%; background-position: 100% 0, 100% 0;
   }
   100% {
-    background-image: linear-gradient(to right, var(--hl-base) 50%, #fff 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
+    background-image: linear-gradient(to right, var(--hl-base) 50%, var(--hl-on) 50%), linear-gradient(var(--hl-fill), var(--hl-fill));
     background-size: 200% 100%, 0% 100%; background-position: 0 0, 100% 0;
   }
 }
@@ -82,6 +86,7 @@
 .dark .link-hl,
 .dark .prose a {
   --hl-base: #e5e7eb;
+  --hl-on: #111827;
 }
 .link-hl.text-ds-green-2,
 .prose a,
