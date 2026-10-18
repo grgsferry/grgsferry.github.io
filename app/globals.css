@@ -95,5 +95,40 @@
   --hl-base: theme('colors.ds-green-2');
 }
 
+/* Firefox fallback: the two-layer text-clipped sweep above renders as plain white text there
+   (the green fill never paints). Use a single green fill layer and switch the text color instead. */
+@supports (-moz-appearance: none) {
+  .link-hl,
+  .prose a {
+    color: var(--hl-base);
+    background-image: linear-gradient(var(--hl-fill), var(--hl-fill));
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    background-size: 0% 100%;
+    background-position: 0 0;
+    transition: background-size 0.2s ease-out, color 0.1s ease-out 0.05s, text-decoration-color 0.2s ease-out;
+  }
+  .link-hl:hover,
+  .prose a:hover {
+    color: var(--hl-on);
+    background-size: 100% 100%;
+    background-position: 0 0;
+  }
+  @keyframes link-intro-moz {
+    0% { color: var(--hl-base); background-size: 0% 100%; background-position: 0 0; }
+    15% { color: var(--hl-base); }
+    20% { color: var(--hl-on); }
+    35%, 50% { color: var(--hl-on); background-size: 100% 100%; background-position: 0 0; }
+    50.1% { color: var(--hl-on); background-size: 100% 100%; background-position: 100% 0; }
+    65% { color: var(--hl-on); background-size: 100% 100%; background-position: 100% 0; }
+    80% { color: var(--hl-on); }
+    85% { color: var(--hl-base); }
+    100% { color: var(--hl-base); background-size: 0% 100%; background-position: 100% 0; }
+  }
+  .link-intro {
+    animation-name: link-intro-moz;
+  }
+}
+
 /* Fade theme colors only after the user has toggled once (class added by DarkModeToggle) */
 .theme-transition body { transition: background-color 200ms, color 200ms; }
