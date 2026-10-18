@@ -5,7 +5,7 @@ export default function Resume() {
     <>
       <div className="flex justify-between">
         <p>
-          <Link className="link-hl" href="/">&lt; Back</Link>
+          <Link className="text-ds-green-2 link-hl" href="/">&lt; Back</Link>
         </p>
       </div>
 
@@ -90,7 +90,7 @@ export default function Resume() {
               "data cleaning",
               "data modeling",
             ].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
+              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-full text-gray-800 dark:text-gray-100">
                 {skill}
               </span>
             ))}
@@ -101,7 +101,7 @@ export default function Resume() {
           <h2 className="text-sm font-medium mb-2">Programming Languages</h2>
           <div className="flex flex-wrap gap-1">
             {["SQL", "Python", "JavaScript", "TypeScript"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
+              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-full text-gray-800 dark:text-gray-100">
                 {skill}
               </span>
             ))}
@@ -112,7 +112,7 @@ export default function Resume() {
           <h2 className="text-sm font-medium mb-2">Databases</h2>
           <div className="flex flex-wrap gap-1">
             {["BigQuery", "MySQL", "PostgreSQL", "SQL Server", "SQLite", "Presto", "MaxCompute"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
+              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-full text-gray-800 dark:text-gray-100">
                 {skill}
               </span>
             ))}
@@ -123,7 +123,7 @@ export default function Resume() {
           <h2 className="text-sm font-medium mb-2">Dashboard & BI Tools</h2>
           <div className="flex flex-wrap gap-1">
             {["Data Studio", "Tableau", "Power BI", "Quick BI", "Metabase", "Redash"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
+              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-full text-gray-800 dark:text-gray-100">
                 {skill}
               </span>
             ))}
@@ -134,7 +134,7 @@ export default function Resume() {
           <h2 className="text-sm font-medium mb-2">Python Libraries</h2>
           <div className="flex flex-wrap gap-1">
             {["pandas", "NumPy", "Matplotlib", "seaborn", "Plotly", "scikit-learn", "scipy", "Streamlit", "Beautiful Soup", "Scrapy"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
+              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-full text-gray-800 dark:text-gray-100">
                 {skill}
               </span>
             ))}
@@ -145,7 +145,7 @@ export default function Resume() {
           <h2 className="text-sm font-medium mb-2">Others</h2>
           <div className="flex flex-wrap gap-1">
             {["Airflow", "Git", "Docker"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-100">
+              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-full text-gray-800 dark:text-gray-100">
                 {skill}
               </span>
             ))}

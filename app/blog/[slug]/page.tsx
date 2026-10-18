@@ -31,7 +31,7 @@ export default async function BlogPost({ params }: Props) {
     <>
       <div className="flex justify-between">
         <p>
-          <Link className="link-hl" href="/blog">&lt; Back to Blog</Link>
+          <Link className="text-ds-green-2 link-hl" href="/blog">&lt; Back to Blog</Link>
         </p>
       </div>
 
