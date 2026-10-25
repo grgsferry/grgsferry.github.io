@@ -5,7 +5,9 @@ export default function Resume() {
     <>
       <div className="flex justify-between">
         <p>
-          <Link className="text-ds-green-2 link-hl" href="/">&lt; Back</Link>
+          <Link className="text-ds-green-2 link-hl" href="/">
+            &lt; Back
+          </Link>
         </p>
       </div>
 
@@ -69,26 +71,32 @@ export default function Resume() {
       </div>
 
       <div className="my-12">
-        <h1 className="font-bold text-2xl text-ds-green-2">Skills and Tools</h1>
+        <h1 className="font-bold text-2xl text-ds-green-2">Training & Certifications</h1>
+        <div className="mt-4">
+          <div className="flex flex-col md:flex-row justify-between">
+            <h2 className="text-base font-bold">Binar Academy</h2>
+            <p className="text-xs">Mar 2022 - Oct 2022</p>
+          </div>
+          <p className="text-sm">Full-Stack Web Development Bootcamp</p>
+          <p className="text-sm">Best Graduate Award</p>
+          <p className="text-sm">Part-time (evenings and weekends), ~200 classroom hours. Core curriculums: Programming fundamentals (OOP), frontend, backend and API development, databases, DevOps</p>
+        </div>
+      </div>
+
+      <div className="my-12">
+        <h1 className="font-bold text-2xl text-ds-green-2">Skills & Tools</h1>
 
         <div className="mt-4">
           <h2 className="text-sm font-medium mb-2">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {[
-              "data analysis",
-              "descriptive statistics",
-              "inferential statistics",
-              "experimentation",
-              "causal inference",
-              "modeling and simulation",
-              "machine learning",
+              "data analysis & statistics",
+              "experimentation & causal inference",
+              "modeling & simulation",
               "root cause analysis",
-              "data visualization",
-              "dashboard development",
-              "data mining",
-              "data scraping",
-              "data cleaning",
-              "data modeling",
+              "dashboards & data visualization",
+              "solution architecture & technical consulting",
+              "data wrangling & modeling",
             ].map((skill) => (
               <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-full text-gray-800 dark:text-gray-100">
                 {skill}
@@ -98,53 +106,9 @@ export default function Resume() {
         </div>
 
         <div className="mt-4">
-          <h2 className="text-sm font-medium mb-2">Programming Languages</h2>
+          <h2 className="text-sm font-medium mb-2">Languages & Tools</h2>
           <div className="flex flex-wrap gap-1">
-            {["SQL", "Python", "JavaScript", "TypeScript"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-full text-gray-800 dark:text-gray-100">
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-4">
-          <h2 className="text-sm font-medium mb-2">Databases</h2>
-          <div className="flex flex-wrap gap-1">
-            {["BigQuery", "MySQL", "PostgreSQL", "SQL Server", "SQLite", "Presto", "MaxCompute"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-full text-gray-800 dark:text-gray-100">
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-4">
-          <h2 className="text-sm font-medium mb-2">Dashboard & BI Tools</h2>
-          <div className="flex flex-wrap gap-1">
-            {["Data Studio", "Tableau", "Power BI", "Quick BI", "Metabase", "Redash"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-full text-gray-800 dark:text-gray-100">
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-4">
-          <h2 className="text-sm font-medium mb-2">Python Libraries</h2>
-          <div className="flex flex-wrap gap-1">
-            {["pandas", "NumPy", "Matplotlib", "seaborn", "Plotly", "scikit-learn", "scipy", "Streamlit", "Beautiful Soup", "Scrapy"].map((skill) => (
-              <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-full text-gray-800 dark:text-gray-100">
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-4">
-          <h2 className="text-sm font-medium mb-2">Others</h2>
-          <div className="flex flex-wrap gap-1">
-            {["Airflow", "Git", "Docker"].map((skill) => (
+            {["SQL", "Python", "JavaScript", "TypeScript", "Airflow", "Git", "Docker"].map((skill) => (
               <span key={skill} className="text-xs bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-full text-gray-800 dark:text-gray-100">
                 {skill}
               </span>

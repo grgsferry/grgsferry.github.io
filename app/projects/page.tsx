@@ -31,8 +31,12 @@ export default function Projects() {
                 text: "Consulted stakeholders to address reporting and operational inefficiencies, designed BI solutions, and delivered data products that improved efficiency by up to 15x, reducing turnaround time by 93%.",
               },
               {
-                label: "Data Infrastructure & Analytics Engineering",
-                text: "Built an end-to-end Google Cloud Platform (GCP) data ecosystem spanning data warehousing, cloud storage, API-driven services, orchestration, schema design, BI dashboards, and a conversational AI agent (text-to-SQL). Integrated data across POS platforms, CRM systems, SAP ERP, and operational tools.",
+                label: "Solution Architecture & Data Infrastructure",
+                text: "Designed an end-to-end Google Cloud Platform (GCP) data ecosystem, deciding what to build, how the components work together, and matching expected outputs to tool capabilities. Scope covered data warehousing, cloud storage, API-driven services, orchestration, schema design, and BI dashboards, integrating data across POS platforms, CRM systems, SAP ERP, and operational tools.",
+              },
+              {
+                label: "Conversational AI Implementation",
+                text: "Implemented a text-to-SQL agent that lets business users query data in plain language, by labeling tables and columns with business definitions and writing instructions that guide how the model interprets questions.",
               },
               {
                 label: "Cross-Functional Stakeholder Management",
