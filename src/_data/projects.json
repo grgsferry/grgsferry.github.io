@@ -1,11 +1,11 @@
 [
   {
-    "title": "End-to-End Business Intelligence Solution and Conversational AI Agent Implementation",
+    "title": "End-to-End BI Solution and Conversational Analytics",
     "client": "Union Group",
     "clientUrl": "https://uniongroupjakarta.com/",
     "industry": "Food and Beverage",
     "period": "Ongoing (Sep 2026 - Nov 2026)",
-    "tools": "GCP, BigQuery, Google Data Studio, Python",
+    "tools": "GCP, Google Data Studio, Python, SQL",
     "outputs": "dashboard, AI implementation, data warehouse, pipeline",
     "summary": [
       { "label": "BI Solution Design & Process Optimization", "text": "Consulted stakeholders to address reporting and operational inefficiencies, designed BI solutions, and delivered data products that improved efficiency by up to 15x, reducing turnaround time by 93%." },
