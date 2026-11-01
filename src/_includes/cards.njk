@@ -1,0 +1,19 @@
+{% for card in cards %}
+{% if not loop.first %}<hr />{% endif %}
+<table cellpadding="6" cellspacing="0">
+  <tr>
+    <td valign="top" width="40%">
+      {% if card.image %}
+      <a href="{{ card.url }}"><img src="/images/{{ card.image }}"{% if card.width %} width="{{ card.width }}" height="{{ card.height }}"{% endif %} style="width: 100%; max-width: 200px; height: auto" loading="lazy" decoding="async" alt="{{ card.title }}" border="1" /></a>
+      {% else %}
+      <div style="width: 100%; max-width: 200px; height: 120px; border: 1px solid #999; box-sizing: border-box"></div>
+      {% endif %}
+    </td>
+    <td valign="top">
+      <b>{% if card.url %}<a href="{{ card.url }}">{{ card.title }}</a>{% else %}{{ card.title }}{% endif %}</b><br />
+      <i>{{ card.type }}</i><br />
+      {{ card.description }}
+    </td>
+  </tr>
+</table>
+{% endfor %}

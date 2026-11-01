@@ -1,0 +1,8 @@
+---
+layout: base.njk
+---
+<p><a href="/blog.html">&larr; Blog</a></p>
+<h2>{{ title }}</h2>
+<p><i>{{ date | isoDate }} &middot; {{ category }}</i></p>
+
+{{ content | safe }}

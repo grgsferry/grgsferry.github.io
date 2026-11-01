@@ -1,0 +1,6 @@
+[
+  { "title": "Home", "url": "/", "section": "home" },
+  { "title": "Projects", "url": "/projects.html", "section": "projects" },
+  { "title": "Labs", "url": "/labs.html", "section": "labs" },
+  { "title": "Blog", "url": "/blog.html", "section": "blog" }
+]

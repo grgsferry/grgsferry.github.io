@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Placeholder Project",
+    "type": "Project type, tools",
+    "description": "A short description of what this project is and what it does. Replace this with the real thing."
+  },
+  {
+    "title": "Dashboards",
+    "url": "/labs-dashboards.html",
+    "image": "Gregorius-Ferry-Tableau-Superstore-Dashboard-Dynamic.png",
+    "type": "Collection, Tableau, Looker Studio",
+    "description": "A collection of public dashboards covering sales, ecommerce, health, travel, and games data."
+  }
+]

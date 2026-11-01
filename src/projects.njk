@@ -1,0 +1,38 @@
+---
+title: Projects
+layout: base.njk
+section: projects
+---
+<h2>Selected Projects</h2>
+{% for project in projects %}
+{% if not loop.first %}<hr />{% endif %}
+<h3>{{ project.title }}</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+    <td valign="top"><b>Client:</b></td>
+    <td>{% if project.clientUrl %}<a href="{{ project.clientUrl }}">{{ project.client }}</a>{% else %}{{ project.client }}{% endif %}</td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Industry:</b></td>
+    <td>{{ project.industry }}</td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Period:</b></td>
+    <td>{{ project.period }}</td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Tools:</b></td>
+    <td>{{ project.tools }}</td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Outputs:</b></td>
+    <td>{{ project.outputs }}</td>
+  </tr>
+</table>
+<p><b>Summary:</b></p>
+<ul>
+  {% for item in project.summary %}
+  <li><i>{{ item.label }}:</i> {{ item.text }}</li>
+  {% endfor %}
+</ul>
+{% endfor %}

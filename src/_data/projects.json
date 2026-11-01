@@ -1,0 +1,44 @@
+[
+  {
+    "title": "End-to-End Business Intelligence Solution and Conversational AI Agent Implementation",
+    "client": "Union Group",
+    "clientUrl": "https://uniongroupjakarta.com/",
+    "industry": "Food and Beverage",
+    "period": "Ongoing (Sep 2026 - Nov 2026)",
+    "tools": "GCP, BigQuery, Google Data Studio, Python",
+    "outputs": "dashboard, AI implementation, data warehouse, pipeline",
+    "summary": [
+      { "label": "BI Solution Design & Process Optimization", "text": "Consulted stakeholders to address reporting and operational inefficiencies, designed BI solutions, and delivered data products that improved efficiency by up to 15x, reducing turnaround time by 93%." },
+      { "label": "Solution Architecture & Data Infrastructure", "text": "Designed an end-to-end Google Cloud Platform (GCP) data ecosystem, deciding what to build, how the components work together, and matching expected outputs to tool capabilities. Scope covered data warehousing, cloud storage, API-driven services, orchestration, schema design, and BI dashboards, integrating data across POS platforms, CRM systems, SAP ERP, and operational tools." },
+      { "label": "Conversational AI Implementation", "text": "Implemented a text-to-SQL agent that lets business users query data in plain language, by labeling tables and columns with business definitions and writing instructions that guide how the model interprets questions." },
+      { "label": "Cross-Functional Stakeholder Management", "text": "Bridged business and technical teams across engineering, finance, business leadership, and operations, translating business requirements into scalable technical solutions." }
+    ]
+  },
+  {
+    "title": "Data Scraper, Data Transformation, and Spatial-Based Dashboard",
+    "client": "Confidential Client",
+    "industry": "Consulting, Marketing",
+    "period": "1 month (Oct 2024 - Nov 2024)",
+    "tools": "Python, Metabase, PostgreSQL",
+    "outputs": "raw data, dashboard, report",
+    "summary": [
+      { "label": "Data Pipeline Development", "text": "Developed automated scrapers to extract public data from national statistics websites and PDF documents, then cleaned and transformed raw data into structured, analysis-ready datasets." },
+      { "label": "Solution Architecture & Delivery", "text": "Designed and deployed a hosted PostgreSQL database and Metabase dashboards, structuring the schema and visualizations around recurring user questions to enable self-service data exploration." },
+      { "label": "Analytics & Strategic Recommendations", "text": "Applied statistical methods to analyze subregional data, uncover socioeconomic patterns, and develop recommendations to help the client prioritize its outreach strategy." }
+    ]
+  },
+  {
+    "title": "Inventory Management Dashboard and Pipeline",
+    "client": "Eyelovin",
+    "clientUrl": "https://www.eyelovin.com/",
+    "industry": "Ecommerce, Fashion and Beauty",
+    "period": "4 months (Sep 2023 - Dec 2023)",
+    "tools": "Tableau, Tableau Prep, MySQL, AWS",
+    "outputs": "data pipeline, dashboard",
+    "summary": [
+      { "label": "Business Process Analysis", "text": "Consulted stakeholders to understand inventory management, product lifecycles, and stockkeeping processes, identifying key metrics to monitor and improve daily operations." },
+      { "label": "BI Solution Development", "text": "Designed and implemented Tableau Cloud dashboards to support operational monitoring and performance tracking, addressing complex data schemas and integrating data from multiple sources." },
+      { "label": "Data Preparation & Orchestration", "text": "Built data preparation and orchestration workflows using Tableau Prep to consolidate multisource data and support reliable, consistent dashboard reporting." }
+    ]
+  }
+]

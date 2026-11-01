@@ -1,0 +1,136 @@
+---
+title: "OSaaD, Online-Spreadsheet-as-a-Dashboard"
+date: 2026-06-07
+category: Opinion
+summary: A quick take on a working solution to a common data vs business stakeholder debate.
+---
+<p>Every data analyst has faced this scenario:</p>
+<ul>
+  <li>The business user asks for a dashboard.</li>
+  <li>The data analyst gathers and seeks to understand what the business user needs.</li>
+  <li>Based on the collected requirements, the data analyst designs, plans, and creates a BI tool dashboard full of interactive, insightful visualizations along with foolproof automation.</li>
+  <li>The dashboard is then used by the business user, but only for a while.</li>
+  <li>Some time after that, the business user asks for raw data because they want to process the data themselves (sometimes with a tweak from what the dashboard provided).</li>
+</ul>
+<p>It feels as if what was created was wrong in the first place, resulting in wasted effort.</p>
+
+<h3>Unmatched Needs and Wasted Effort</h3>
+<p>
+  The business user's need for raw data is still valid. Sometimes, they just need a different angle on the data that is not provided by the dashboard. Or perhaps the data is there, but they want to present it differently than how
+  the dashboard displays it, which is not wrong. It is also understandable since most of them are not technical and might not have the capability to query it themselves using SQL.
+</p>
+<p>
+  On the other hand, it is a shame that the data analyst's effort was not used effectively, especially since the design process of a dashboard using BI tools takes no small amount of resources. The dashboard's intention to make
+  insight gathering faster for the business user becomes invalid.
+</p>
+
+<h3>The Working Solution</h3>
+<p>
+  I observed that this problem exists more in modern and fast-paced environments where things change quickly and have a higher adoption of technology, such as online spreadsheet usage, API integrations, modern data orchestration,
+  internal tools, etc.
+</p>
+<p>Hence, a solution was born to solve this issue: "Online-Spreadsheet-as-a-Dashboard" (OSaaD), a connected spreadsheet that can update its content based on set configurations. Why does this solution work?</p>
+<ul>
+  <li>The development does not take as long as a BI tool dashboard.</li>
+  <li>In most circumstances, changes are easier to implement.</li>
+  <li>Business users nowadays have the capability and want the ability to process the data themselves.</li>
+  <li>No SQL is needed from the business user's side.</li>
+  <li>Raw data means no curated insights; every person who uses the dashboard can generate insights themselves for their own unique use case.</li>
+</ul>
+
+<h3>How OSaaD Works</h3>
+<div style="overflow-x: auto">
+            <pre>
+                              (1)                  (2)
+        [Database] ───► [Database API] ◄──► [Spreadsheet API] ◄─── [Online Spreadsheet]
+                       |                 (3)                 |
+                       | ◄────── Configuration Layer ──────► |
+                          query, job on/off, schedule, cell
+                            to input, append/replace, etc</pre
+  >
+</div>
+<ol>
+  <li>The database API retrieves data.</li>
+  <li>The spreadsheet API updates the spreadsheet content.</li>
+  <li>
+    This whole process can be automated using modern orchestration tools by keeping these configurations in mind:
+    <ul>
+      <li>API endpoint, key, secret, and token if needed.</li>
+      <li>Database query script.</li>
+      <li>When to run the job (CRON config).</li>
+      <li>Sheet name and destination cell for input.</li>
+      <li>Toggle for whether the data will replace or append.</li>
+      <li>Toggle for whether the job is active or inactive.</li>
+      <li>Any other custom configurations.</li>
+    </ul>
+  </li>
+</ol>
+<p>
+  This process is much simpler if you use tools within a single ecosystem, like Google. The integration between BigQuery and Google Sheets is easily implemented using the "Connected Sheets" feature, as the necessary infrastructure
+  is already built-in (<a href="https://docs.cloud.google.com/bigquery/docs/connected-sheets">docs</a>).
+</p>
+<p>
+  As for dashboard functionalities, almost all of them already exist in online spreadsheets. Filters (single and multi-select) can use data validation and the <tt>INDEX</tt> formula. Other functions like <tt>FILTER</tt> and
+  <tt>QUERY</tt> are also useful to prep data. The slicer feature and pivot tables are easy to use. Most of the formulas that I've used for OSaaD are common ones like <tt>SUM</tt>, <tt>SUMIF/SUMIFS</tt>, <tt>COUNT/COUNTIFS</tt>,
+  and <tt>VLOOKUP</tt>.
+</p>
+
+<h3>The Downsides and The Mitigations</h3>
+<p>With speed and ease comes higher variance and unpredictability:</p>
+<div style="overflow-x: auto">
+  <table border="1" cellpadding="4" cellspacing="0" width="100%">
+    <tr>
+      <th align="left">Problem</th>
+      <th align="left">Mitigation</th>
+    </tr>
+    <tr>
+      <td valign="top">Shorter dashboard lifespans result in a higher number of abandoned and concurrently maintained dashboards.</td>
+      <td valign="top">Maintain a central dashboard repository detailing the goals of each sheet. Any new data requests must be reviewed to see if they can be integrated into an existing dashboard before creating a new one.</td>
+    </tr>
+    <tr>
+      <td valign="top">Providing only raw data risks data misunderstandings, as there is no standard definition for the datapoints.</td>
+      <td valign="top">Always include a data dictionary guide or core curated insights within the setup.</td>
+    </tr>
+    <tr>
+      <td valign="top">Loss of a "Single Source of Truth" (SSOT) when different business users apply conflicting formula logic (<tt>SUMIFS</tt>, <tt>FILTER</tt>) to the same raw data.</td>
+      <td valign="top">Define critical business logic by query script itself, rather than calculating it on the sheet.</td>
+    </tr>
+  </table>
+</div>
+<p>On top of that, online spreadsheets also have structural limitations:</p>
+<div style="overflow-x: auto">
+  <table border="1" cellpadding="4" cellspacing="0" width="100%">
+    <tr>
+      <th align="left">Problem</th>
+      <th align="left">Mitigation</th>
+    </tr>
+    <tr>
+      <td valign="top">Maximum cell count limitations (e.g., 10 million cells in Google Sheets).</td>
+      <td valign="top">Minimize cell usage by keeping only the last X periods of data, reducing aggregation combinations, and deleting unused blank cells (yes, they are counted).</td>
+    </tr>
+    <tr>
+      <td valign="top">Steeper performance trade-offs as data scales compared to dedicated BI tools.</td>
+      <td valign="top">Apply the same mitigation strategies mentioned above (minimize cell usage, keep fewer periods, reduce aggregations).</td>
+    </tr>
+    <tr>
+      <td valign="top">Lack of robust, granular access management per user, which increases the risk of accidental edits.</td>
+      <td valign="top">Lock cells and ranges that are not supposed to be editable, restricting edit access to the data analyst or data team.</td>
+    </tr>
+    <tr>
+      <td valign="top">Compromised data governance, since spreadsheets can easily be duplicated, downloaded, or shared externally.</td>
+      <td valign="top">Restrict sharing permissions strictly to corporate emails only, reduce "share to all" practice, and monitor sensitive activities.</td>
+    </tr>
+    <tr>
+      <td valign="top">Limited native visualization options and limited database connectors compared to full-scale BI platforms.</td>
+      <td valign="top">None &ndash; accept this limitation as a constraint.</td>
+    </tr>
+  </table>
+</div>
+
+<h3>Conclusion</h3>
+<p>
+  OSaaD is not perfect, but it has proven to answer the recurring friction data analysts and business users face when collaborating. It also has the added value of speed and flexibility that is needed in a high-paced team and
+  workplaces. However, the implementation itself must adhere to a strict set of rules and configurations to maintain the robustness and accuracy expected of a BI tools dashboard.
+</p>
+
+<p><i>This blog post is written by human. LLM is only used for grammar checking.</i></p>
