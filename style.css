@@ -48,6 +48,21 @@ a {
     flex-direction: column;
     gap: 0.2em;
   }
+  body {
+    font-size: 14px;
+    -webkit-text-size-adjust: 100%;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  table[border] th,
+  table[border] td {
+    padding: 4px 6px;
+    font-size: 0.9em;
+  }
 }
 hr {
   border: 0;
